@@ -39,3 +39,5 @@ Route::get('/userinfo', function() {
 });
 
 Route::view('info', 'info');
+
+Route::redirect('/witam', '/');
