@@ -29,3 +29,13 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Route::get('/userinfo', function() {
+        return view('userinfo', [
+            'name' => 'Amont',
+            'lastName' => 'IV',
+            'land' => 'Fandel'
+        ]);
+});
+
+Route::view('info', 'info');
