@@ -32,9 +32,9 @@ require __DIR__.'/auth.php';
 
 Route::get('/userinfo', function() {
         return view('userinfo', [
-            'name' => 'Amont',
-            'lastName' => 'IV',
-            'land' => 'Fandel'
+            'firstName' => 'Jan',
+            'lastName' => 'Kowalski',
+            'city' => 'Warszawa'
         ]);
 });
 
