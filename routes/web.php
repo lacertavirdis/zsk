@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\UserFormController;
+use App\Http\Controllers\OrderController;
 
 /*
 |--------------------------------------------------------------------------
@@ -78,3 +79,9 @@ Route::get('showarray', [ShowController::class, 'showArray']);
 
 Route::view('userform', 'forms.user_form');
 Route::get('UserFormController', [UserFormController::class, 'showUser']);
+
+Route::view('order', 'order');
+Route::get('showorder', [OrderController::class,'showOrder']);
+
+Route::view('orderarray', 'orderarray');
+Route::get('showorderarray', [OrderController::class, 'showOrderArray']);
