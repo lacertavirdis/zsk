@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\UserFormController;
 use App\Http\Controllers\OrderController;
+use App\Http\Controllers\ProductController;
 
 /*
 |--------------------------------------------------------------------------
@@ -47,7 +48,7 @@ Route::redirect('/witam', '/');
 
 
 Route::get('user/contact/{userId}', function(int $userId){
-    return 'Kontakt do użytkownika'.$userId;
+    return 'Kontakt do użytkownika '.$userId;
 });
 
 
@@ -72,6 +73,7 @@ Route::prefix('user')->group(function(){
 });
 
 Route::redirect('/admin', '/admin/home');
+Route::redirect('/user', '/user/home');
 
 Route::get('show', [ShowController::class, 'show']);
 Route::get('showuser', [ShowController::class, 'showView']);
@@ -85,3 +87,5 @@ Route::get('showorder', [OrderController::class,'showOrder']);
 
 Route::view('orderarray', 'orderarray');
 Route::get('showorderarray', [OrderController::class, 'showOrderArray']);
+
+Route::get('new_product', [ProductController::class, 'store']);
